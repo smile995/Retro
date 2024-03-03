@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="valentine">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
@@ -10,6 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- css connection -->
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body class="mt-5">
@@ -28,59 +29,98 @@
                     <ul tabindex="0"
                         class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box ">
                         <div class="tooltip" data-tip="Home">
-                            <button class="btn rounded-full p-3">
+                            <button class="btn rounded-full border-1 border-purple-500 px-4">
                                 <img src="./Icon/home.png" alt="">
                             </button>
                         </div>
                         <div class="tooltip" data-tip="Pen">
-                            <button class="btn rounded-full p-3">
+                            <button class="btn rounded-full border-1 border-purple-500 px-4">
                                 <img src="./Icon/fountain-pen-close-up.png" alt="">
                             </button>
                         </div>
                         <div class="tooltip" data-tip="Add Friend">
-                            <button class="btn rounded-full p-3">
+                            <button class="btn rounded-full border-1 border-purple-500 px-4">
                                 <img src="./Icon/add-friend.png" alt="">
                             </button>
                         </div>
                         <div class="tooltip" data-tip="Flag">
-                            <button class="btn rounded-full p-3">
+                            <button class="btn rounded-full border-1 border-purple-500 px-4">
                                 <img src="./Icon/red-flag.png" alt="">
                             </button>
                         </div>
                     </ul>
                 </div>
-                <a class="btn btn-ghost text-xl">daisyUI</a>
+                <a class="btn btn-ghost text-3xl font-bold">ReTro</a>
             </div>
             <div class="navbar-center hidden lg:flex">
                 <ul class="menu menu-horizontal px-1 gap-10">
                     <div class="tooltip" data-tip="Home">
-                        <button class="btn rounded-full p-3">
+                        <button class="btn rounded-full border-1 border-purple-500 px-4">
                             <img src="./Icon/home.png" alt="">
                         </button>
                     </div>
                     <div class="tooltip" data-tip="Pen">
-                        <button class="btn rounded-full p-3">
+                        <button class="btn rounded-full border-1 border-purple-500 px-4">
                             <img src="./Icon/fountain-pen-close-up.png" alt="">
                         </button>
                     </div>
                     <div class="tooltip" data-tip="Add Friend">
-                        <button class="btn rounded-full p-3">
+                        <button class="btn rounded-full border-1 border-purple-500 px-4">
                             <img src="./Icon/add-friend.png" alt="">
                         </button>
                     </div>
                     <div class="tooltip" data-tip="Flag">
-                        <button class="btn rounded-full p-3">
+                        <button class="btn rounded-full border-1 border-purple-500 px-4">
                             <img src="./Icon/red-flag.png" alt="">
                         </button>
                     </div>
                 </ul>
             </div>
-            <div class="navbar-end">
-                <a class="btn">Sign In</a>
+            <div class="navbar-end ">
+                <a class="btn bg-[#797DFC] text-white">Sign In</a>
             </div>
         </div>
     </nav>
     <main>
+        <!-- hero banner section -->
+        <section>
+            <div class="hero min-h-screen bg-[#07082F]">
+                <div class="lg:flex space-y-5 justify-around items-center w-full">
+                    <div class="text-white">
+                        <h1 class="mb-5 lg:text-6xl text-3xl lg:text-start text-center font-bold">Welcome to the <br> <span class="text-[#7579f1]">ReTro</span> Forum</h1>
+                        <p class="mb-5 lg:text-start text-center">Share your favorite opinion and win and wp <br> forum coffee mug!</p>
+                        <div >
+                            <input class=" rounded-full px-5 py-2 w-[80%]" type="text"  placeholder="Search by category" name="category" id="">
+                            <button class="bg-[#797DFC] rounded-full px-3 py-1 text-white font-semibold -ml-20">Search</button>
+                        </div>
+                    </div>
+                    <div class="bg-white shadow-lg p-5 rounded-xl gap-y-3 text-blue-800 font-semibold lg:w-1/3">
+                        <div class="flex justify-between">
+                            <p>Registered Users</p>
+                            <p>01</p>
+
+                        </div>
+                        <div class="flex justify-between">
+                            <p>Forum</p>
+                            <p>05</p>
+
+                        </div>
+                        <div class="flex justify-between">
+                            <p>Topics</p>
+                            <p>01</p>
+
+                        </div>
+                        <div class="flex justify-between">
+                            <p>Replies</p>
+                            <p>01</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
 
 
     </main>
