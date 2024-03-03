@@ -12,45 +12,71 @@
     <!-- css connection -->
 </head>
 
-<body class="mt-10 ">
+<body class="mt-5">
+
     <nav>
         <div class="navbar bg-base-100">
-            <div class="flex-1">
-                <a class="btn text-xl text-[#12132D]">ReTro</a>
-            </div>
-            <div class="flex-none">
-                <div class="dropdown dropdown-end gap-3">
-                    <div class="tooltip" data-tip="Home">
-                        <button class="btn rounded-full p-3">
-                            <img src="./Icon/home.png" alt="">
-                        </button>
+            <div class="navbar-start">
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
                     </div>
-                    <div class="tooltip" data-tip="Home">
-                        <button class="btn rounded-full p-3">
-                            <img src="./Icon/home.png" alt="">
-                        </button>
-                    </div>
-                    <div class="tooltip" data-tip="Home">
-                        <button class="btn rounded-full p-3">
-                            <img src="./Icon/home.png" alt="">
-                        </button>
-                    </div>
-                    <div class="tooltip" data-tip="Home">
-                        <button class="btn rounded-full p-3">
-                            <img src="./Icon/home.png" alt="">
-                        </button>
-                    </div>
-
-                </div>
-                <div class="dropdown dropdown-end">
-                    <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
-                        <div class="w-10 rounded-full">
-                            <img alt="Tailwind CSS Navbar component"
-                                src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                    <ul tabindex="0"
+                        class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box ">
+                        <div class="tooltip" data-tip="Home">
+                            <button class="btn rounded-full p-3">
+                                <img src="./Icon/home.png" alt="">
+                            </button>
                         </div>
-                    </div>
-
+                        <div class="tooltip" data-tip="Pen">
+                            <button class="btn rounded-full p-3">
+                                <img src="./Icon/fountain-pen-close-up.png" alt="">
+                            </button>
+                        </div>
+                        <div class="tooltip" data-tip="Add Friend">
+                            <button class="btn rounded-full p-3">
+                                <img src="./Icon/add-friend.png" alt="">
+                            </button>
+                        </div>
+                        <div class="tooltip" data-tip="Flag">
+                            <button class="btn rounded-full p-3">
+                                <img src="./Icon/red-flag.png" alt="">
+                            </button>
+                        </div>
+                    </ul>
                 </div>
+                <a class="btn btn-ghost text-xl">daisyUI</a>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+                <ul class="menu menu-horizontal px-1 gap-10">
+                    <div class="tooltip" data-tip="Home">
+                        <button class="btn rounded-full p-3">
+                            <img src="./Icon/home.png" alt="">
+                        </button>
+                    </div>
+                    <div class="tooltip" data-tip="Pen">
+                        <button class="btn rounded-full p-3">
+                            <img src="./Icon/fountain-pen-close-up.png" alt="">
+                        </button>
+                    </div>
+                    <div class="tooltip" data-tip="Add Friend">
+                        <button class="btn rounded-full p-3">
+                            <img src="./Icon/add-friend.png" alt="">
+                        </button>
+                    </div>
+                    <div class="tooltip" data-tip="Flag">
+                        <button class="btn rounded-full p-3">
+                            <img src="./Icon/red-flag.png" alt="">
+                        </button>
+                    </div>
+                </ul>
+            </div>
+            <div class="navbar-end">
+                <a class="btn">Sign In</a>
             </div>
         </div>
     </nav>
