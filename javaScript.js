@@ -2,9 +2,59 @@ const apiData = async () => {
     const response = await fetch('https://openapi.programming-hero.com/api/retro-forum/posts');
     const alData = await response.json();
     const arrayOfData = alData.posts;
-    arrayOfData.forEach(post => {
+    const postContainer = document.getElementById('PostContainer')
 
-        // console.log(post);
+    arrayOfData.forEach(post => {
+        const createDiv = document.createElement('div');
+        createDiv.innerHTML = `
+        <div class="bg-slate-200 rounded-xl shadow-xl p-5 flex justify-between border-2 border-blue-400 ">
+        <div>
+
+            <div>
+                <img class="w-[65px] rounded-xl" src="${post.image}" alt="">
+            </div>
+
+        </div>
+        <div class="flex-grow  ">
+            <div class="p-2 border-b-2 border-dashed space-y-2">
+                <div class="font-semibold flex items-center gap-3">
+                    <p># ${post.category}</p>
+                    <p>Author: ${post.author.name}</p>
+                </div>
+                <div>
+                    <h1 class="text-xl font-semibold">${post.title}</h1>
+                </div>
+                <div>
+                    <p>${post.description}</p>
+                </div>
+
+            </div>
+            <div class="p-2 flex  justify-between ">
+                <div class="flex items-center justify-between w-1/2 ">
+                    <div class="flex gap-2 items-center">
+                        <img src="./Icon/chat.png" alt="">
+                        <p>${post.comment_count}</p>
+                    </div>
+                    <div class="flex gap-2 items-center">
+                        <img src="./Icon/eye.png" alt="">
+                        <p>${post.view_count}</p>
+                    </div>
+                    <div class="flex gap-2 items-center">
+                        <img src="./Icon/back-in-time.png" alt="">
+                        <p>${post.posted_time}</p>
+                    </div>
+                </div>
+                <div class="rounded-full bg-green-600 px-3 py-2">
+                    <button id="bookMark" class="text-white"> <img src="./Icon/mark.png" alt="">
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+        `
+        postContainer.appendChild(createDiv)
     });
 }
 
@@ -26,7 +76,7 @@ const latestApi = async () => {
                 <p>${latest.author.posted_date ? latest.author.posted_date : 'No publish date'}</p>
             </div>
             <h2 class=" text-xl text-start font-semibold">${latest.title}</h2>
-            <p>${latest.description.slice(0,100)}</p>
+            <p>${latest.description.slice(0, 100)}</p>
             <div class="flex items-center gap-3">
                 <div>
                 <img src=${latest.profile_image} alt="Shoes"
@@ -34,7 +84,7 @@ const latestApi = async () => {
                 </div>
                 <div>
                     <p class='text-xl font-semibold'>${latest.author.name}</p>
-                    <p>${latest.author.designation ? latest.author.designation : 'Unknown' }</p>
+                    <p>${latest.author.designation ? latest.author.designation : 'Unknown'}</p>
                 </div>
             </div>
         </div>
