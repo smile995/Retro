@@ -23,7 +23,7 @@ const latestApi = async () => {
         <div class="card-body  ">
             <div class="flex items-center gap-3">
                 <img src="./Icon/calendar.png" alt="">
-                <p>published Date</p>
+                <p>${latest.author.posted_date ? latest.author.posted_date : 'No publish date'}</p>
             </div>
             <h2 class=" text-xl text-start font-semibold">${latest.title}</h2>
             <p>${latest.description.slice(0,100)}</p>
@@ -33,8 +33,8 @@ const latestApi = async () => {
                 class="rounded-full w-[50px]" />
                 </div>
                 <div>
-                    <p>name</p>
-                    <p>job title</p>
+                    <p class='text-xl font-semibold'>${latest.author.name}</p>
+                    <p>${latest.author.designation ? latest.author.designation : 'Unknown' }</p>
                 </div>
             </div>
         </div>
