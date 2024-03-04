@@ -93,9 +93,9 @@
                         <p class="mb-5 lg:text-start text-center">Share your favorite opinion and win and wp <br> forum
                             coffee mug!</p>
                         <div>
-                            <input class=" rounded-full px-5 py-2 w-[80%]" type="text" placeholder="Search by category"
-                                name="category" id="">
-                            <button
+                            <input class=" rounded-full text-black px-5 py-2 w-[80%]" type="text" placeholder="Search by category"
+                                name="category" id="category">
+                            <button id="search"
                                 class="bg-[#797DFC] rounded-full px-3 py-1 text-white font-semibold -ml-20">Search</button>
                         </div>
                     </div>
@@ -137,13 +137,35 @@
             </div>
         </section>
         <!-- fatching data showing section -->
-        <section class=" lg:flex gap-5 w-full">
+        <section class=" lg:flex gap-5 w-full my-10">
             <div id="PostContainer" class=" lg:flex-grow space-y-5">
 
             </div>
-            <div class="lg:w-[30%]">
-                reference data comtainer.
+            <div class="lg:w-[30%] bg-gray-100 rounded p-5">
+                <div class="flex justify-between bg-slate-200 rounded p-5">
+                    <h1 class="font-bold text-xl">Title</h1>
+                    <div class="flex gap-2 items-center">
+                        <img class="w-5" src="./Icon/checkmark.png" alt="">
+                        <p class="font-semibold text-lg"> Mark as Read (<span id="count">0</span>)</p>
+                    </div>
+
+                </div>
             </div>
+        </section>
+        <!-- join our forum  -->
+        <section class="bg-[#203365] p-8 rounded flex justify-between items-center text-white">
+            <div class="space-y-3">
+                <h1 class="text-4xl font-bold">Join Our Forum</h1>
+                <p>
+                    Share your favorite opinion and win and wp forum coffee mug! <br> Yes, you can run unit tests and
+                    view the results directly within the app.
+                </p>
+                <button class="px-5 py-2 bg-[#797DFC] rounded-full font-semibold">Register</button>
+            </div>
+            <div>
+                <img src="./images/joinforum.png" alt="">
+            </div>
+
         </section>
 
         <!-- Latest post  section -->
