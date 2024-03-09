@@ -7,7 +7,7 @@ const apiData = async () => {
     arrayOfData.forEach(post => {
         const createDiv = document.createElement('div');
         createDiv.innerHTML = `
-        <div class="bg-slate-100 hover:bg-white rounded-xl shadow-xl p-5 flex justify-between border-2 border-blue-300 ">
+        <div class="bg-slate-100 hover:bg-white rounded-xl shadow-xl p-5 flex justify-between border-2 border-green-300 ">
         <div>
 
             <div>
@@ -33,15 +33,15 @@ const apiData = async () => {
                 <div class="flex items-center justify-between w-1/2 ">
                     <div class="flex gap-2 items-center">
                         <img src="./Icon/chat.png" alt="">
-                        <p class='font-bold text-blue-400'>${post.comment_count}</p>
+                        <p class='font-bold text-green-500'>${post.comment_count}</p>
                     </div>
                     <div class="flex gap-2 items-center">
                         <img src="./Icon/eye.png" alt="">
-                        <p class='font-bold text-blue-400'>${post.view_count}</p>
+                        <p class='font-bold text-green-500'>${post.view_count}</p>
                     </div>
                     <div class="flex gap-2 items-center">
                         <img src="./Icon/back-in-time.png" alt="">
-                        <p class='font-bold text-blue-400'>${post.posted_time}</p>
+                        <p class='font-bold text-green-500'>${post.posted_time}</p>
                     </div>
                 </div>
                 <div class="rounded-full bg-green-600 px-3 py-2">
@@ -95,7 +95,7 @@ const loadCategory = async (category) => {
         const div = document.createElement('div');
         div.innerHTML = `
         
-        <div class="bg-slate-200 hover:bg-blue-100 rounded-xl shadow-xl p-5 flex justify-between border-2 border-blue-300 ">
+        <div class="bg-slate-200 hover:bg-blue-100 rounded-xl shadow-xl p-5 flex justify-between border-2 border-green-300 ">
         <div>
 
             <div>
@@ -121,15 +121,15 @@ const loadCategory = async (category) => {
                 <div class="flex items-center justify-between w-1/2 ">
                     <div class="flex gap-2 items-center">
                         <img src="./Icon/chat.png" alt="">
-                        <p>${post.comment_count}</p>
+                        <p class='font-bold text-green-500'>${post.comment_count}</p>
                     </div>
                     <div class="flex gap-2 items-center">
                         <img src="./Icon/eye.png" alt="">
-                        <p>${post.view_count}</p>
+                        <p class='font-bold text-green-500'>${post.view_count}</p>
                     </div>
                     <div class="flex gap-2 items-center">
                         <img src="./Icon/back-in-time.png" alt="">
-                        <p >${post.posted_time}</p>
+                        <p class='font-bold text-green-500'>${post.posted_time}</p>
                     </div>
                 </div>
                 <div class="rounded-full bg-green-600 px-3 py-2">
