@@ -44,8 +44,8 @@ const apiData = async () => {
                         <p>${post.posted_time}</p>
                     </div>
                 </div>
-                <div class="rounded-full bg-green-600 px-3 py-2">
-                    <button onclick='btnFunction()' class="bookMark text-white"> <img src="./Icon/mark.png" alt="">
+                <div onclick='btnFunction()' class="rounded-full bg-green-600 px-3 py-2">
+                    <button  class="bookMark text-white"> <img src="./Icon/mark.png" alt="">
                     </button>
                 </div>
 
@@ -69,7 +69,7 @@ const btnFunction = () => {
     count = count + 1
     const setValue = document.getElementById('count');
     setValue.innerText = count;
-    console.log(digit);
+   
 
 
 }
@@ -155,7 +155,7 @@ const latestApi = async () => {
     latestPosts.forEach(latest => {
         const div = document.createElement('div')
         div.innerHTML = `
-        <div class="card  bg-base-100 shadow-xl">
+        <div class="card  bg-gray-200 shadow-xl">
         <figure class="px-10 pt-10">
             <img src=${latest.cover_image} alt="Shoes"
                 class="rounded-xl" />
