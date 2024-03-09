@@ -5,6 +5,7 @@ const apiData = async () => {
     const postContainer = document.getElementById('PostContainer')
 
     arrayOfData.forEach(post => {
+
         const createDiv = document.createElement('div');
         createDiv.innerHTML = `
         <div class="bg-slate-200 hover:bg-blue-100 rounded-xl shadow-xl p-5 flex justify-between border-2 border-blue-300 ">
@@ -56,11 +57,13 @@ const apiData = async () => {
         `
 
         postContainer.appendChild(createDiv)
+
     });
 
 
 
 }
+
 let count = 0
 const btnFunction = () => {
 
@@ -69,26 +72,17 @@ const btnFunction = () => {
     count = count + 1
     const setValue = document.getElementById('count');
     setValue.innerText = count;
-   
-
+    
 
 }
 
-const searchBtn = document.getElementById('search')
-
-searchBtn.addEventListener('click', () => {
-    const inputCategory = document.getElementById('category');
-    const category = inputCategory.value;
-    loadCategory(category)
-
-})
 
 const loadCategory = async (category) => {
     const response = await fetch(`https://openapi.programming-hero.com/api/retro-forum/posts?category=${category}`);
     const allData = await response.json();
     const posts = allData.posts;
     const categoryContainer = document.getElementById('PostContainer');
-    categoryContainer.innerHTML='';
+    categoryContainer.innerHTML = '';
     posts.forEach(post => {
         const div = document.createElement('div');
         div.innerHTML = `
