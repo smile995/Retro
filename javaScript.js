@@ -5,10 +5,9 @@ const apiData = async () => {
     const postContainer = document.getElementById('PostContainer')
 
     arrayOfData.forEach(post => {
-
         const createDiv = document.createElement('div');
         createDiv.innerHTML = `
-        <div class="bg-slate-200 hover:bg-blue-100 rounded-xl shadow-xl p-5 flex justify-between border-2 border-blue-300 ">
+        <div class="bg-slate-100 hover:bg-white rounded-xl shadow-xl p-5 flex justify-between border-2 border-blue-300 ">
         <div>
 
             <div>
@@ -34,19 +33,19 @@ const apiData = async () => {
                 <div class="flex items-center justify-between w-1/2 ">
                     <div class="flex gap-2 items-center">
                         <img src="./Icon/chat.png" alt="">
-                        <p>${post.comment_count}</p>
+                        <p class='font-bold text-blue-400'>${post.comment_count}</p>
                     </div>
                     <div class="flex gap-2 items-center">
                         <img src="./Icon/eye.png" alt="">
-                        <p>${post.view_count}</p>
+                        <p class='font-bold text-blue-400'>${post.view_count}</p>
                     </div>
                     <div class="flex gap-2 items-center">
                         <img src="./Icon/back-in-time.png" alt="">
-                        <p>${post.posted_time}</p>
+                        <p class='font-bold text-blue-400'>${post.posted_time}</p>
                     </div>
                 </div>
-                <div onclick='btnFunction()' class="rounded-full bg-green-600 px-3 py-2">
-                    <button  class="bookMark text-white"> <img src="./Icon/mark.png" alt="">
+                <div class="rounded-full bg-green-600 px-3 py-2">
+                    <button onclick='btnFunction()' class="bookMark text-white"> <img src="./Icon/mark.png" alt="">
                     </button>
                 </div>
 
@@ -57,13 +56,11 @@ const apiData = async () => {
         `
 
         postContainer.appendChild(createDiv)
-
     });
 
 
 
 }
-
 let count = 0
 const btnFunction = () => {
 
@@ -72,17 +69,28 @@ const btnFunction = () => {
     count = count + 1
     const setValue = document.getElementById('count');
     setValue.innerText = count;
-    
+    console.log(digit);
+
 
 }
 
+const searchBtn = document.getElementById('search')
+
+searchBtn.addEventListener('click', () => {
+    const inputCategory = document.getElementById('category');
+    const category = inputCategory.value;
+    loadCategory(category)
+    inputCategory.value='';
+
+
+})
 
 const loadCategory = async (category) => {
     const response = await fetch(`https://openapi.programming-hero.com/api/retro-forum/posts?category=${category}`);
     const allData = await response.json();
     const posts = allData.posts;
     const categoryContainer = document.getElementById('PostContainer');
-    categoryContainer.innerHTML = '';
+    categoryContainer.innerHTML='';
     posts.forEach(post => {
         const div = document.createElement('div');
         div.innerHTML = `
@@ -121,7 +129,7 @@ const loadCategory = async (category) => {
                     </div>
                     <div class="flex gap-2 items-center">
                         <img src="./Icon/back-in-time.png" alt="">
-                        <p>${post.posted_time}</p>
+                        <p >${post.posted_time}</p>
                     </div>
                 </div>
                 <div class="rounded-full bg-green-600 px-3 py-2">
@@ -137,8 +145,11 @@ const loadCategory = async (category) => {
         `
 
         categoryContainer.appendChild(div)
+       
 
     })
+    
+    
 }
 
 
